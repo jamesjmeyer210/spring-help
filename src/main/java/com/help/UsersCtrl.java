@@ -9,9 +9,15 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.ArrayList;
 import java.util.List;
 
+@Controller
 public class UsersCtrl {
 
-    @GetMapping("profiles")
+    @GetMapping("/")
+    public String showIndex(){
+        return "index";
+    }
+
+    @GetMapping("/profiles")
     @ResponseBody
     public String showProfile(){
         return "profile page placeholder";
@@ -28,10 +34,10 @@ public class UsersCtrl {
     @ResponseBody
     public List<String> showListOfUsers(){
         List<String> users = new ArrayList<>();
-        return users;
         users.add("Fer");
         users.add("Ryan");
         users.add("Sophie");
+        return users;
     }
 
     @GetMapping("/forgotPassword")
