@@ -12,10 +12,10 @@ import java.util.List;
 @Controller
 public class UsersCtrl {
 
-    @GetMapping("/")
-    public String showIndex(){
-        return "index";
-    }
+//    @GetMapping("/")
+//    public String showIndex(){
+//        return "index";
+//    }
 
     @GetMapping("/profiles")
     @ResponseBody
